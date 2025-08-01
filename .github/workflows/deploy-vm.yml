@@ -42,7 +42,7 @@ jobs:
         working-directory: terraform
 
       - name: Terraform Plan
-        run: terraform plan -var "ssh_public_key=$(cat ~/.ssh/id_rsa.pub)"
+        run: terraform plan -var-file=terraform.tfvars
         working-directory: terraform
 
 
