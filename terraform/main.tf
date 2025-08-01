@@ -6,7 +6,7 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "rg" {
   name     = "vm-cor"
-  location = "East US"
+  location = "West US"
 }
 
 resource "azurerm_virtual_network" "vnet" {
