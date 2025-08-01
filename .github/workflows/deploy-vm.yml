@@ -24,8 +24,8 @@ jobs:
         with:
           terraform_version: ${{ env.TF_VERSION }}
 
-      - name: Set SSH public key
-        run: echo "TF_VAR_ssh_public_key=$(cat ~/.ssh/id_rsa.pub)" >> $GITHUB_ENV
+      - name: Set SSH public key from GitHub secret
+        run: echo "TF_VAR_ssh_public_key=${{ secrets.SSH_PUBLIC_KEY }}" >> $GITHUB_ENV
     
 
       - name: Login to Azure
