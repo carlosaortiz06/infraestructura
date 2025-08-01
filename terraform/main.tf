@@ -5,7 +5,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "rg" {
-  name     = "vm-rg"
+  name     = "vm-cor"
   location = "East US"
 }
 
