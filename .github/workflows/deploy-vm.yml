@@ -42,7 +42,11 @@ jobs:
         working-directory: terraform
 
       - name: Terraform Plan
-        run: terraform plan -var-file=terraform.tfvars
+        run: |
+          export TF_LOG=DEBUG
+          export TF_LOG_PATH=terraform-debug.log
+          terraform plan -var-file=terraform.tfvars
+          cat terraform-debug.log
         working-directory: terraform
 
 
